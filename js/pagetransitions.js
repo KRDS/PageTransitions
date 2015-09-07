@@ -1,4 +1,13 @@
-define(function(){
+/* Dynamic shim config */
+requirejs.config({
+	shim: {
+		'libs/modernizr/modernizr': {
+			exports: 'Modernizr'
+		}
+	}
+});
+
+define(['libs/modernizr/modernizr'], function(){
 	var $main = $( '#main' ),
 		$pages = $main.children( 'div.pt-page' ),
 		current = 0,
